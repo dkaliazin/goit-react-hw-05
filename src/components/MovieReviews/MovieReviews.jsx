@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import React from 'react';
 import { getReviews } from '../../api';
 import { useParams } from 'react-router-dom';
 

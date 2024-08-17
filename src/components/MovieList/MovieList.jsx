@@ -12,7 +12,7 @@ export default function MovieList({ movies }) {
                     <li key={movie.id} className={css.li}>
                         <Link to={`/movies/${movie.id}`} state={{ from: location }}>
                             <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
-                            <p>{movie.title}</p>
+                            <h3>{movie.title}</h3>
                         </Link>
                     </li>
                 ))

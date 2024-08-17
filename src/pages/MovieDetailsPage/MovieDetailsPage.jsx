@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef} from 'react';
 import { useParams, useNavigate, useLocation, Link, Outlet, } from 'react-router-dom';
 import { getMovieDetails } from '../../api';
+import React from 'react';
 const MovieDetailsPage = () => {
   const { id } = useParams();
   const location = useLocation();

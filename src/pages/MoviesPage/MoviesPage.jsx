@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import MovieList from '../../components/MovieList/MovieList'
+import React from 'react';
 export default function MoviesPage() {
 const [movies, setMovies] = useState([]);
 const [query, setQuery] = useState('');

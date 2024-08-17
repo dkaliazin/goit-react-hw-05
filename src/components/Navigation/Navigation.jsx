@@ -3,12 +3,8 @@ import React from 'react';
 export default function Navigation() {
     return (
         <nav>
-            <NavLink to="/" end>
-                Home
-            </NavLink>
-            <NavLink to="/movies">
-                Movies
-            </NavLink>
+            <NavLink to="/" end>Home</NavLink>
+            <NavLink to="/movies">Movies</NavLink>
         </nav>
     )
 }

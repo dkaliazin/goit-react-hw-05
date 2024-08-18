@@ -5,14 +5,14 @@ import { useParams } from 'react-router-dom';
 
 export default function MovieReviews() {
 const [reviews, setReviews] = useState([]);
- const { id } = useParams();
+ const { movieId } = useParams();
     useEffect(() => {
         const fetchReviews = async () => {
-            const reviewsData = await getReviews (id);
+            const reviewsData = await getReviews (movieId);
             setReviews(reviewsData);
         };
         fetchReviews();
-    }, [id]);
+    }, [movieId]);
 
 return (
     <>

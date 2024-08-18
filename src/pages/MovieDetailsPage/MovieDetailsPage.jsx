@@ -3,7 +3,7 @@ import { useParams, useNavigate, useLocation, Link, Outlet, } from 'react-router
 import { getMovieDetails } from '../../api';
 import React from 'react';
 const MovieDetailsPage = () => {
-  const { id } = useParams();
+  const { movieId } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
   const backLinkLocationRef = useRef(location.state?.from ?? '/movies');
@@ -15,11 +15,11 @@ const MovieDetailsPage = () => {
   };
 
   useEffect(() => {
-    getMovieDetails(id)
+    getMovieDetails(movieId)
       .then(setMovie)
       .catch(setError)
       .finally(() => setLoading(false));
-  }, [id]);
+  }, [movieId]);
     if (loading) return <p>Wait, please.</p>;
     if (error) return <p>Error</p>;
   return (
